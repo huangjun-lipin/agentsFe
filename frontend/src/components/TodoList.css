@@ -1,0 +1,122 @@
+.todo-list {
+    width: 100%;
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+.todo-header h2 {
+    font-size: 1.2rem;
+    color: #1a1a2e;
+}
+
+.todo-count {
+    font-size: 0.85rem;
+    color: #888;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.todo-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.todo-form input {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.todo-form input:focus {
+    border-color: #4f46e5;
+}
+
+.todo-form button {
+    padding: 0.6rem 1.2rem;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.todo-form button:hover:not(:disabled) {
+    background: #4338ca;
+}
+
+.todo-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.todo-items {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 0.4rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+
+.todo-item:hover {
+    background: #fafafa;
+}
+
+.todo-item.completed .todo-title {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todo-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 2px;
+}
+
+.todo-title {
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.todo-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    padding: 2px 4px;
+}
+
+.todo-item:hover .todo-delete {
+    opacity: 1;
+}
+
+.todo-empty {
+    text-align: center;
+    color: #aaa;
+    padding: 2rem;
+    font-size: 0.9rem;
+}

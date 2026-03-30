@@ -1,0 +1,31 @@
+{
+  "llm": {
+    "default_model": "default",
+    "active_model_alias": "default",
+    "models": [
+      {
+        "alias": "default",
+        "provider": "openai",
+        "base_url": "https://api.openai.com/v1",
+        "model": "gpt-4o",
+        "api_key": ""
+      }
+    ]
+  },
+  "agent": {
+    "workspace": "./workspace",
+    "skills_dir": "./workspace/skills",
+    "recursion_limit": 50,
+    "compaction": {
+      "enabled": true,
+      "auto_compact_threshold": 80000,
+      "context_window": 128000,
+      "reserve_tokens": 8000,
+      "max_history_share": 0.7
+    }
+  },
+  "mcp": {
+    "enabled": false,
+    "servers": {}
+  }
+}
